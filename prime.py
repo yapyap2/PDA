@@ -13,7 +13,7 @@ cpu_count = 0
 
 primeList = []
 
-while n < 10000:
+while n < 1000000:
     is_prime = True  
 
 
