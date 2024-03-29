@@ -22,7 +22,9 @@ while n < 10000:
             is_prime = False
             break
 
-    primeList.append(n)
+    
+    if(is_prime):
+         primeList.append(n)
 
     
     cpuUtil = psutil.cpu_percent(interval=None)
