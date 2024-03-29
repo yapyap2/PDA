@@ -3,6 +3,7 @@ import os
 import psutil
 from concurrent.futures import ThreadPoolExecutor
 
+
 def is_prime(n):
     for div in range(2, int(n**0.5) + 1):
         if n % div == 0:
