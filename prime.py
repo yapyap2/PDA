@@ -44,7 +44,6 @@ ioStart = time.time()
 
 for p in primeList:
     file_path = "./primes/" + str(n) + ".txt"
-
     with open(file_path, "w") as file:
         file.write(str(p))
 
@@ -55,6 +54,4 @@ for filename in os.listdir("./primes"):
         os.remove(file_path)
 
 ioEnd = time.time()
-
-
 print(f"IO 시간: {ioEnd - ioStart} 초")

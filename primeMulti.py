@@ -22,7 +22,7 @@ primeList = []
 # 병렬 처리를 위한 스레드 풀 생성
 with ThreadPoolExecutor() as executor:
     # 2부터 9999까지 소수 판별 작업을 병렬로 실행
-    results = executor.map(process_number, range(2, 1000000))
+    results = executor.map(process_number, range(2, 100))
     for result in results:
         if result is not None:
             primeList.append(result)
@@ -32,6 +32,8 @@ executionTime = endTime - startTime
 print(f"알고리즘 실행 시간: {executionTime} 초")
 
 ioStart = time.time()
+if not os.path.exists('./primes'):
+    os.makedirs('./primes')
 
 for p in primeList:
     file_path = f"./primes/{p}.txt"
